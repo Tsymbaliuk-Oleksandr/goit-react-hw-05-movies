@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export const ListEl = styled.li`
   margin-bottom: 8px;
+  list-style-type: none;
 `;
 
 export const Navlink = styled(NavLink)`
