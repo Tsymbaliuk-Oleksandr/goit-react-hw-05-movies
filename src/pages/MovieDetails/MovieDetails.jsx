@@ -1,7 +1,6 @@
 import { fetchMovie, API_IMG_URL } from 'themoviedbOrgAPI/themoviedbOrgAPI';
 import { useEffect, useState, Suspense } from 'react';
 import {
-  Link,
   Outlet,
   useParams,
   useLocation,
@@ -9,7 +8,13 @@ import {
   Navigate,
 } from 'react-router-dom';
 import Box from 'components/Box';
-import { Poster, BackButton, ButtonText, Icon } from './MovieDetails.styled.js';
+import {
+  Poster,
+  BackButton,
+  ButtonText,
+  Icon,
+  LinkDetails,
+} from './MovieDetails.styled.js';
 
 const MovieDetails = () => {
   const [movieData, setMovieData] = useState();
@@ -70,16 +75,22 @@ const MovieDetails = () => {
             boxShadow="0px 3px 1px 1px rgba(100, 100, 150, 0.15)"
           >
             <h3>Additional information</h3>
-            <p>
-              <Link to="cast" state={{ from: location.state?.from }}>
+            <div>
+              <LinkDetails
+                to="movieCast"
+                state={{ from: location.state?.from }}
+              >
                 Cast
-              </Link>
-            </p>
-            <p>
-              <Link to="reviews" state={{ from: location.state?.from }}>
+              </LinkDetails>
+            </div>
+            <div>
+              <LinkDetails
+                to="movieReviews"
+                state={{ from: location.state?.from }}
+              >
                 Reviews
-              </Link>
-            </p>
+              </LinkDetails>
+            </div>
           </Box>
           <Suspense fallback={<section>Loading...</section>}>
             <Outlet />

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { ImArrowLeft2 } from 'react-icons/im';
 
 export const Poster = styled.img`
@@ -41,4 +42,8 @@ export const Icon = styled(ImArrowLeft2)`
   top: 50%;
   left: 0;
   transform: translate(0, -50%);
+`;
+
+export const LinkDetails = styled(Link)`
+  text-decoration: none;
 `;
