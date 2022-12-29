@@ -1,4 +1,4 @@
-import { fetchMovie, API_IMG_URL } from 'themoviedbOrgAPI/themoviedbOrgAPI';
+import { fetchMovie, API_IMG_URL } from 'services/api.js';
 import { useEffect, useState, Suspense } from 'react';
 import {
   Outlet,

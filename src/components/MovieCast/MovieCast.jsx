@@ -1,7 +1,7 @@
 import Box from 'components/Box';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMovieCast, API_IMG_URL } from 'themoviedbOrgAPI/themoviedbOrgAPI';
+import { fetchMovieCast, API_IMG_URL } from 'services/api.js';
 
 const MovieCast = () => {
   const { movieId } = useParams();

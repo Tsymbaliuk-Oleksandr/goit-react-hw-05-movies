@@ -1,6 +1,6 @@
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { searchMovies } from 'themoviedbOrgAPI/themoviedbOrgAPI';
+import { searchMovies } from 'services/api.js';
 import SearchBox from 'components/SearchBox';
 import MovieList from 'components/MovieList';
 import Box from 'components/Box';

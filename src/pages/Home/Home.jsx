@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { fetchTrending } from 'themoviedbOrgAPI/themoviedbOrgAPI';
+import { fetchTrending } from 'services/api.js';
 import MovieList from 'components/MovieList';
 import Box from 'components/Box';
 

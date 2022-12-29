@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMovieReview } from 'themoviedbOrgAPI/themoviedbOrgAPI';
+import { fetchMovieReview } from 'services/api.js';
 import Box from 'components/Box';
 
 const MovieReviews = () => {
